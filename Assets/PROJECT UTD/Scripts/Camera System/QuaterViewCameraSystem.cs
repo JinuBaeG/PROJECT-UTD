@@ -17,7 +17,7 @@ namespace SCU
         public Cinemachine.CinemachineComponentBase componentBase;
 
         float cameraDistance;
-        private float cameraMaxDistance = 100.0f;
+        private float cameraMaxDistance = 80.0f;
         private float cameraMinDistance = 5.0f;
 
         private void Update()
