@@ -9,6 +9,11 @@ namespace UTD
     {
         Dictionary<Vector3Int, PlacementData> placedObjects = new();
 
+        public int GetPlacedObjectID(Vector3Int gridPosition)
+        {
+            return placedObjects[gridPosition].ID;
+        }
+
         public void AddOjectAt(Vector3Int gridPosition, Vector2Int objectSize, int ID, int placedObjectIndex)
         {
             List<Vector3Int> positionToOccupy = CalculatePositions(gridPosition, objectSize);

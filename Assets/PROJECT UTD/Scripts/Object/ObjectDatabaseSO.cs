@@ -8,11 +8,11 @@ namespace UTD
     [CreateAssetMenu]
     public class ObjectDatabaseSO : ScriptableObject
     {
-        public List<ObectData> objectsData;
+        public List<ObjectData> objectsData;
     }
 
     [Serializable]
-    public class ObectData
+    public class ObjectData
     {
         [field: SerializeField]
         public string Name { get; private set; }
@@ -24,7 +24,16 @@ namespace UTD
         public Vector2Int Size { get; private set; } = Vector2Int.one;
 
         [field: SerializeField]
-        public GameObject Prefab { get; private set; } 
+        public GameObject Prefab { get; private set; }
+
+        [field: SerializeField]
+        public float Damage { get; private set; }
+
+        [field: SerializeField]
+        public string Attribute { get; private set; }
+
+        [field: SerializeField]
+        public float AttackSpeed { get; private set; }
 
     }
 }

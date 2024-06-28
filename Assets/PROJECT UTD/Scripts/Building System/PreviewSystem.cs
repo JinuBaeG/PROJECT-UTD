@@ -15,13 +15,18 @@ namespace UTD
         private Material previewMaterialsPrefab;
         private Material previewMaterialInstance;
 
+        [SerializeField]
         private Renderer cellIndicatorRenderer;
+        [SerializeField]
+        private LayerMask _LayerMask;
 
         private void Start()
         {
             previewMaterialInstance = new Material(previewMaterialsPrefab);
             cellIndicator.gameObject.SetActive(false);
             cellIndicatorRenderer = cellIndicator.GetComponentInChildren<Renderer>();
+
+            //_LayerMask = LayerMask.GetMask("Ground", "Default");
         }
 
         public void StartShowingPlacementPreview(GameObject prefab, Vector2Int size)
@@ -32,7 +37,16 @@ namespace UTD
             cellIndicator.SetActive(true);
         }
 
-        internal void StartShowingRemovePreview()
+        public void StartShowingReplacementPreview(GameObject prefab, Vector2Int size, Vector3Int gridPosition)
+        {
+            previewObject = Instantiate(prefab);
+            previewObject.transform.position = gridPosition;
+            PreparePreview(previewObject);
+            PrepareCursor(size);
+            cellIndicator.SetActive(true);
+        }
+
+        public void StartShowingCursorPreview()
         {
             cellIndicator.SetActive(true);
             PrepareCursor(Vector2Int.one);

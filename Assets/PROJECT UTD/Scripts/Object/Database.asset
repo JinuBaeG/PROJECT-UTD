@@ -13,7 +13,66 @@ MonoBehaviour:
   m_Name: Database
   m_EditorClassIdentifier: 
   objectsData:
-  - <Name>k__BackingField: Main
+  - <Name>k__BackingField: Common Tower
     <ID>k__BackingField: 0
-    <Size>k__BackingField: {x: 2, y: 4}
+    <Size>k__BackingField: {x: 2, y: 2}
     <Prefab>k__BackingField: {fileID: 2548271059977028357, guid: 3b4fb4dbf29a7439f9ba10a23d58c4f8, type: 3}
+    <Damage>k__BackingField: 1
+    <Attribute>k__BackingField: 
+    <AttackSpeed>k__BackingField: 0
+  - <Name>k__BackingField: Uncommon Tower
+    <ID>k__BackingField: 1
+    <Size>k__BackingField: {x: 2, y: 2}
+    <Prefab>k__BackingField: {fileID: 0}
+    <Damage>k__BackingField: 0
+    <Attribute>k__BackingField: 
+    <AttackSpeed>k__BackingField: 0
+  - <Name>k__BackingField: Rare Tower
+    <ID>k__BackingField: 2
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 0}
+    <Damage>k__BackingField: 0
+    <Attribute>k__BackingField: 
+    <AttackSpeed>k__BackingField: 0
+  - <Name>k__BackingField: Epic Tower
+    <ID>k__BackingField: 3
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 0}
+    <Damage>k__BackingField: 0
+    <Attribute>k__BackingField: 
+    <AttackSpeed>k__BackingField: 0
+  - <Name>k__BackingField: Unique Tower
+    <ID>k__BackingField: 0
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 0}
+    <Damage>k__BackingField: 0
+    <Attribute>k__BackingField: 
+    <AttackSpeed>k__BackingField: 0
+  - <Name>k__BackingField: Legendary Tower
+    <ID>k__BackingField: 0
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 0}
+    <Damage>k__BackingField: 0
+    <Attribute>k__BackingField: 
+    <AttackSpeed>k__BackingField: 0
+  - <Name>k__BackingField: Awaken Tower
+    <ID>k__BackingField: 0
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 0}
+    <Damage>k__BackingField: 0
+    <Attribute>k__BackingField: 
+    <AttackSpeed>k__BackingField: 0
+  - <Name>k__BackingField: Demigod Tower
+    <ID>k__BackingField: 0
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 0}
+    <Damage>k__BackingField: 0
+    <Attribute>k__BackingField: 
+    <AttackSpeed>k__BackingField: 0
+  - <Name>k__BackingField: God Tower
+    <ID>k__BackingField: 0
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 0}
+    <Damage>k__BackingField: 0
+    <Attribute>k__BackingField: 
+    <AttackSpeed>k__BackingField: 0

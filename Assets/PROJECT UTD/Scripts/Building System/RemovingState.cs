@@ -10,23 +10,20 @@ namespace UTD
         private int gameObjectIndex = -1;
         Grid grid;
         PreviewSystem previewSystem;
-        GridData floorData;
         GridData buildingData;
         ObjectPlacer objectPlacer;
 
         public RemovingState(Grid grid,
                              PreviewSystem previewSystem,
-                             GridData floorData,
                              GridData buildingData,
                              ObjectPlacer objectPlacer)
         {
             this.grid = grid;
             this.previewSystem = previewSystem;
-            this.floorData = floorData;
             this.buildingData = buildingData;
             this.objectPlacer = objectPlacer;
 
-            previewSystem.StartShowingRemovePreview();
+            previewSystem.StartShowingCursorPreview();
         }
 
         public void EndState()
@@ -40,10 +37,6 @@ namespace UTD
             if (buildingData.CanPlacedObjectAt(gridPosition, Vector2Int.one) == false)
             {
                 selectedData = buildingData;
-            }
-            else if (floorData.CanPlacedObjectAt(gridPosition, Vector2Int.one) == false)
-            {
-                selectedData = floorData;
             }
 
             if(selectedData == null)
@@ -68,8 +61,7 @@ namespace UTD
 
         private bool CheckIfSelectionISValid(Vector3Int gridPosition)
         {
-            return !(buildingData.CanPlacedObjectAt(gridPosition, Vector2Int.one) &&
-                floorData.CanPlacedObjectAt(gridPosition, Vector2Int.one));
+            return !(buildingData.CanPlacedObjectAt(gridPosition, Vector2Int.one));
         }
 
         public void UpdateState(Vector3Int gridPosition)

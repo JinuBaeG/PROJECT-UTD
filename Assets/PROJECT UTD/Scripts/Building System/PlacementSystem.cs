@@ -18,7 +18,7 @@ namespace UTD
         [SerializeField]
         private GameObject gridVisualization;
 
-        private GridData floorData, buildingData;
+        private GridData buildingData;
 
         [SerializeField]
         private PreviewSystem preview;
@@ -30,27 +30,39 @@ namespace UTD
 
         IBuildingState buildingState;
 
+        private bool isReplace;
+
         private void Start()
         {
             StopPlacement();
-            floorData = new();
             buildingData = new();
         }
 
+        // Turret Place
         public void StartPlacement(int ID)
         {
             StopPlacement();
             gridVisualization.SetActive(true);
-            buildingState = new PlacementState(ID, grid, preview, database, floorData, buildingData, objectPlacer);
+            buildingState = new PlacementState(ID, grid, preview, database, buildingData, objectPlacer);
             inputManager.OnClicked += PlaceStructure;
             inputManager.OnExit += StopPlacement;
         }
-
+        // Turret Replace
+        public void StartReplacement()
+        {
+            StopPlacement();
+            gridVisualization.SetActive(true);
+            buildingState = new ReplacementState(grid, preview, database, buildingData, objectPlacer);
+            inputManager.OnClicked += PlaceStructure;
+            //inputManager.OnExit += StopPlacement;
+            isReplace = true;
+        }
+        // Turret Remove
         public void StartRemoving()
         {
             StopPlacement();
             gridVisualization.SetActive(true);
-            buildingState = new RemovingState(grid, preview, floorData, buildingData, objectPlacer);
+            buildingState = new RemovingState(grid, preview, buildingData, objectPlacer);
             inputManager.OnClicked += PlaceStructure;
             inputManager.OnExit += StopPlacement;
         }
@@ -65,6 +77,14 @@ namespace UTD
             Vector3Int gridPosition = grid.WorldToCell(mousePosition);
 
             buildingState.OnAction(gridPosition);
+
+            if(!isReplace)
+            {
+                StopPlacement();
+            } else
+            {
+                isReplace = false;
+            }
         }
 
         //private bool CheckPlacementValidity(Vector3Int gridPosition, int selectObjectIndex)
