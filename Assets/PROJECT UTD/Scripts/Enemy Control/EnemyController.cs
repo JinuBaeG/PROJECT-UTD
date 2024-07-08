@@ -7,9 +7,11 @@ namespace UTD
 {
     public class EnemyController : MonoBehaviour
     {
+        public static EnemyController instance;
+
         public float healthPoint;
 
-        private float maxHealthPoint;
+        public float maxHealthPoint;
 
         public float moveSpeed = 10f;
 
@@ -19,9 +21,40 @@ namespace UTD
 
         private Transform target;
 
+        public delegate void OnDamage(float healthPoint, float maxHealthPoint);
+        public OnDamage onDamageCallback;
+
+        public void Damage(float damage)
+        {
+            healthPoint -= damage;
+
+            onDamageCallback(damage, healthPoint);
+
+            if(healthPoint <= 0)
+            {
+                Destroy(gameObject);
+            }
+
+        }
+
+        [ContextMenu("Damage Debug")]
+        public void DamageDebugButton()
+        {
+            Damage(20);
+        }
+
+        private void Awake()
+        {
+            instance = this;
+        }
+
+        private void OnDestroy()
+        {
+            instance = null;
+        }
+
         private void Start()
         {
-            Debug.Log("New Enemy");
             nmAgent = GetComponent<NavMeshAgent>();
             target = way1_2.transform;
             nmAgent.speed = moveSpeed;

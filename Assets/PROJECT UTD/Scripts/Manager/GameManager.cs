@@ -4,22 +4,28 @@ using UnityEngine;
 
 namespace UTD
 {
+
+    // 전체 게임 시간 컨트롤 : 라운드 시간, 전체 게임 시간, 스폰 시간
+    // 
+
     public class GameManager : MonoBehaviour
     {
         public static GameManager instance;
         //bool isPlay = true;
 
         [Header("# Game Control")]
-        public float gameTime;
-        public float maxGametime;
-        public float roundTime;
         public bool gameIsLive;
 
-        [Header("# Player Info")]
-        public float health;
-        public float maxHealth;
+        public float gameTime;
+        public float maxGametime;
+        
+        
         public int round;
         public int maxRound;
+        public float roundTime;
+
+        [Header("# Player Info")]
+
         public int kill;
         public int resource;
 

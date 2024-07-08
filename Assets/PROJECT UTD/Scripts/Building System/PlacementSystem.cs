@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +8,7 @@ namespace UTD
     {
         [SerializeField]
         private InputManager inputManager;
+
         [SerializeField]
         private Grid grid;
 
@@ -39,8 +39,10 @@ namespace UTD
         }
 
         // Turret Place
-        public void StartPlacement(int ID)
+        public void StartPlacement()
         {
+            int ID = PickRandomTurret(database);
+            Debug.Log(ID);
             StopPlacement();
             gridVisualization.SetActive(true);
             buildingState = new PlacementState(ID, grid, preview, database, buildingData, objectPlacer);
@@ -126,6 +128,32 @@ namespace UTD
                 lastDetectedPosition = gridPosition;
             }
 
+        }
+
+        public int PickRandomTurret(ObjectDatabaseSO database)
+        {
+            int sum = 0;
+            foreach(var turret in database.objectsData)
+            {
+                sum += turret.weight;
+            }
+
+            var rnd = Random.Range(0, sum);
+
+            for(int i = 0; i < database.objectsData.Count; i++)
+            {
+                var turret = database.objectsData[i];
+                if (turret.weight > rnd)
+                {
+                    return database.objectsData[i].ID;
+                }
+                else
+                {
+                    rnd -= turret.weight;
+                }
+            }
+
+            return -1;
         }
     }
 }

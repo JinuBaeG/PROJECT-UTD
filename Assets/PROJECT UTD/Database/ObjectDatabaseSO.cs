@@ -27,13 +27,22 @@ namespace UTD
         public GameObject Prefab { get; private set; }
 
         [field: SerializeField]
-        public float Damage { get; private set; }
+        public int Damage { get; private set; }
 
         [field: SerializeField]
         public string Attribute { get; private set; }
 
         [field: SerializeField]
         public float AttackSpeed { get; private set; }
+
+        [field: SerializeField]
+        public bool isSplash { get; private set; } = false;
+
+        [field: SerializeField]
+        public int sellPrice { get; private set; }
+
+        [field: SerializeField]
+        public int weight { get; private set; }
 
     }
 }

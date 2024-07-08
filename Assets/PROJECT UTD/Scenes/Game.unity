@@ -1558,14 +1558,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb7f3b1fe699f45a88d2270299ebea1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameIsLive: 0
   gameTime: 0
   maxGametime: 0
-  roundTime: 0
-  gameIsLive: 0
-  health: 0
-  maxHealth: 0
   round: 0
   maxRound: 0
+  roundTime: 0
   kill: 0
   resource: 0
 --- !u!4 &520905884

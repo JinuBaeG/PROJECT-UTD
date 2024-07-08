@@ -56,6 +56,7 @@ namespace UTD
             }
 
             int index = objectPlacer.PlaceObject(database.objectsData[selectedObjectIndex].Prefab, grid.CellToWorld(gridPosition));
+            objectPlacer.InitTurret(database, selectedObjectIndex);
 
             GridData selectedData = buildingData;
 
