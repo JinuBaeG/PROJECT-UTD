@@ -208,7 +208,7 @@ MonoBehaviour:
       - m_Target: {fileID: 865139380}
         m_TargetAssemblyTypeName: UTD.PlacementSystem, Assembly-CSharp
         m_MethodName: StartPlacement
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -840,7 +840,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 236913322}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4684,17 +4684,17 @@ SceneRoots:
   m_Roots:
   - {fileID: 1388472145}
   - {fileID: 752344519}
-  - {fileID: 2047739369}
   - {fileID: 236913324}
+  - {fileID: 2047739369}
+  - {fileID: 854325151}
   - {fileID: 520905884}
   - {fileID: 1626362655}
-  - {fileID: 1525578059}
-  - {fileID: 446596544}
-  - {fileID: 854325151}
-  - {fileID: 891461690}
-  - {fileID: 686159306}
-  - {fileID: 351092788}
-  - {fileID: 669528119}
-  - {fileID: 457619660}
   - {fileID: 594601418}
   - {fileID: 823440504}
+  - {fileID: 351092788}
+  - {fileID: 669528119}
+  - {fileID: 891461690}
+  - {fileID: 1525578059}
+  - {fileID: 446596544}
+  - {fileID: 686159306}
+  - {fileID: 457619660}

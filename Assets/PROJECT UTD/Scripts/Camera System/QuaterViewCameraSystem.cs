@@ -14,8 +14,8 @@ namespace SCU
         public float zoomSensitvity = 10f;
 
         [SerializeField]
-        public float horizontalZone = 5.0f;
-        public float verticalZone = 5.0f;
+        public float horizontalZone = 7.0f;
+        public float verticalZone = 7.0f;
 
         private Vector3 beginCampos = Vector3.zero;
 

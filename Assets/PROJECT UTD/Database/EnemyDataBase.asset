@@ -15,7 +15,7 @@ MonoBehaviour:
   objectsData:
   - <Name>k__BackingField: Common Enemy
     <ID>k__BackingField: 0
-    <Prefab>k__BackingField: {fileID: 5221698416406676390, guid: 80e675484316047b09129d2204f27a10, type: 3}
-    <HealthPoint>k__BackingField: 10
+    <Prefab>k__BackingField: {fileID: 3043035592029603516, guid: 80e675484316047b09129d2204f27a10, type: 3}
+    <HealthPoint>k__BackingField: 40
     <Attribute>k__BackingField: 
     <MoveSpeed>k__BackingField: 1

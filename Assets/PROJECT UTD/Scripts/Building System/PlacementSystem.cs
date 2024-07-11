@@ -42,7 +42,6 @@ namespace UTD
         public void StartPlacement()
         {
             int ID = PickRandomTurret(database);
-            Debug.Log(ID);
             StopPlacement();
             gridVisualization.SetActive(true);
             buildingState = new PlacementState(ID, grid, preview, database, buildingData, objectPlacer);

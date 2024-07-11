@@ -11,6 +11,8 @@ namespace UTD
 
         public GameObject muzzlePrefab;
         public Transform firePosition;
+        public Transform target;
+        private EnemyController enemy;
 
         private float lastShootTime = 0f;
         public float attackSpeed = 0f;
@@ -26,7 +28,6 @@ namespace UTD
 
         private void Update()
         {
-            //Debug.Log(damage + " / " + attackSpeed);
             if (!scanner.nearestTarget)
             {
                 Idle();
@@ -40,7 +41,9 @@ namespace UTD
 
         public void Scan()
         {
-            Vector3 targetPos = scanner.nearestTarget.position;
+            target = scanner.nearestTarget;
+
+            Vector3 targetPos = target.position;
 
             transform.LookAt(targetPos);
 
@@ -57,10 +60,13 @@ namespace UTD
 
         public void Attack()
         {
-            if (Time.time > lastShootTime + 0.5f)
+            if (Time.time > lastShootTime + attackSpeed)
             {
                 // Possible Shoot
                 lastShootTime = Time.time;
+
+                enemy = target.GetComponent<EnemyController>();
+                enemy.Damage(damage);
 
                 var newMuzzle = Instantiate(muzzlePrefab);
                 newMuzzle.transform.SetPositionAndRotation(firePosition.position, firePosition.rotation);

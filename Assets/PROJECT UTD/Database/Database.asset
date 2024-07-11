@@ -17,7 +17,7 @@ MonoBehaviour:
     <ID>k__BackingField: 0
     <Size>k__BackingField: {x: 2, y: 2}
     <Prefab>k__BackingField: {fileID: 4100750550872549091, guid: 969df0c2428e14550af71c36838c5813, type: 3}
-    <Damage>k__BackingField: 0
+    <Damage>k__BackingField: 10
     <Attribute>k__BackingField: 
     <AttackSpeed>k__BackingField: 1
     <isSplash>k__BackingField: 0
@@ -27,7 +27,7 @@ MonoBehaviour:
     <ID>k__BackingField: 1
     <Size>k__BackingField: {x: 2, y: 2}
     <Prefab>k__BackingField: {fileID: 4100750550872549091, guid: 969df0c2428e14550af71c36838c5813, type: 3}
-    <Damage>k__BackingField: 0
+    <Damage>k__BackingField: 8
     <Attribute>k__BackingField: 
     <AttackSpeed>k__BackingField: 0.3
     <isSplash>k__BackingField: 0
@@ -35,9 +35,9 @@ MonoBehaviour:
     <weight>k__BackingField: 33100
   - <Name>k__BackingField: Rare Tower
     <ID>k__BackingField: 2
-    <Size>k__BackingField: {x: 1, y: 1}
+    <Size>k__BackingField: {x: 2, y: 2}
     <Prefab>k__BackingField: {fileID: 4100750550872549091, guid: 969df0c2428e14550af71c36838c5813, type: 3}
-    <Damage>k__BackingField: 0
+    <Damage>k__BackingField: 30
     <Attribute>k__BackingField: 
     <AttackSpeed>k__BackingField: 1.2
     <isSplash>k__BackingField: 0
@@ -45,9 +45,9 @@ MonoBehaviour:
     <weight>k__BackingField: 10200
   - <Name>k__BackingField: Epic Tower
     <ID>k__BackingField: 3
-    <Size>k__BackingField: {x: 1, y: 1}
+    <Size>k__BackingField: {x: 2, y: 2}
     <Prefab>k__BackingField: {fileID: 4100750550872549091, guid: 969df0c2428e14550af71c36838c5813, type: 3}
-    <Damage>k__BackingField: 0
+    <Damage>k__BackingField: 80
     <Attribute>k__BackingField: 
     <AttackSpeed>k__BackingField: 1
     <isSplash>k__BackingField: 1
@@ -55,19 +55,19 @@ MonoBehaviour:
     <weight>k__BackingField: 5100
   - <Name>k__BackingField: Unique Tower
     <ID>k__BackingField: 4
-    <Size>k__BackingField: {x: 1, y: 1}
+    <Size>k__BackingField: {x: 2, y: 2}
     <Prefab>k__BackingField: {fileID: 4100750550872549091, guid: 969df0c2428e14550af71c36838c5813, type: 3}
-    <Damage>k__BackingField: 0
+    <Damage>k__BackingField: 150
     <Attribute>k__BackingField: 
     <AttackSpeed>k__BackingField: 800
     <isSplash>k__BackingField: 0
     <sellPrice>k__BackingField: 30
-    <weight>k__BackingField: 0.8
+    <weight>k__BackingField: 0
   - <Name>k__BackingField: Legendary Tower
     <ID>k__BackingField: 5
-    <Size>k__BackingField: {x: 1, y: 1}
+    <Size>k__BackingField: {x: 2, y: 2}
     <Prefab>k__BackingField: {fileID: 4100750550872549091, guid: 969df0c2428e14550af71c36838c5813, type: 3}
-    <Damage>k__BackingField: 0
+    <Damage>k__BackingField: 800
     <Attribute>k__BackingField: 
     <AttackSpeed>k__BackingField: 0.5
     <isSplash>k__BackingField: 1
@@ -75,9 +75,9 @@ MonoBehaviour:
     <weight>k__BackingField: 500
   - <Name>k__BackingField: Awaken Tower
     <ID>k__BackingField: 6
-    <Size>k__BackingField: {x: 1, y: 1}
+    <Size>k__BackingField: {x: 2, y: 2}
     <Prefab>k__BackingField: {fileID: 4100750550872549091, guid: 969df0c2428e14550af71c36838c5813, type: 3}
-    <Damage>k__BackingField: 0
+    <Damage>k__BackingField: 1500
     <Attribute>k__BackingField: 
     <AttackSpeed>k__BackingField: 0.5
     <isSplash>k__BackingField: 1
@@ -85,9 +85,9 @@ MonoBehaviour:
     <weight>k__BackingField: 200
   - <Name>k__BackingField: Demigod Tower
     <ID>k__BackingField: 7
-    <Size>k__BackingField: {x: 1, y: 1}
+    <Size>k__BackingField: {x: 2, y: 2}
     <Prefab>k__BackingField: {fileID: 4100750550872549091, guid: 969df0c2428e14550af71c36838c5813, type: 3}
-    <Damage>k__BackingField: 0
+    <Damage>k__BackingField: 5000
     <Attribute>k__BackingField: 
     <AttackSpeed>k__BackingField: 0.5
     <isSplash>k__BackingField: 1
@@ -95,9 +95,9 @@ MonoBehaviour:
     <weight>k__BackingField: 80
   - <Name>k__BackingField: God Tower
     <ID>k__BackingField: 8
-    <Size>k__BackingField: {x: 1, y: 1}
+    <Size>k__BackingField: {x: 2, y: 2}
     <Prefab>k__BackingField: {fileID: 4100750550872549091, guid: 969df0c2428e14550af71c36838c5813, type: 3}
-    <Damage>k__BackingField: 0
+    <Damage>k__BackingField: 10000
     <Attribute>k__BackingField: 
     <AttackSpeed>k__BackingField: 0.3
     <isSplash>k__BackingField: 1

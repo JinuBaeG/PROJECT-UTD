@@ -27,8 +27,8 @@ namespace UTD
         public void Damage(float damage)
         {
             healthPoint -= damage;
-
-            onDamageCallback(damage, healthPoint);
+            
+            onDamageCallback(healthPoint, maxHealthPoint);
 
             if(healthPoint <= 0)
             {
