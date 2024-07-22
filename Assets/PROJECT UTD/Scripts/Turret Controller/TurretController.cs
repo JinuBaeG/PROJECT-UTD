@@ -59,11 +59,6 @@ namespace UTD
 
             transform.LookAt(targetPos);
 
-            if(anim)
-            {
-                anim.SetBool("isDetect", true);
-            }
-
             Attack();
         }
 
@@ -86,7 +81,12 @@ namespace UTD
                 lastShootTime = Time.time;
 
                 enemy = target.GetComponent<EnemyController>();
-                
+
+
+                if (anim)
+                {
+                    anim.SetBool("isDetect", true);
+                }
 
                 var newMuzzle = Instantiate(muzzlePrefab);
                 newMuzzle.transform.SetPositionAndRotation(firePosition.position, firePosition.rotation);

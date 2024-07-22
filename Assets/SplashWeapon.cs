@@ -10,7 +10,6 @@ namespace UTD
         public GameObject bombMuzzle;
 
         private Transform target;
-        private EnemyController enemy;
 
         private int damage;
         private int damageRange;
@@ -19,44 +18,66 @@ namespace UTD
         {
             this.damage = damage;
             this.damageRange = damageRange;
-            this.enemy = enemy;
             target = enemy.transform;
         }
 
         private void FixedUpdate()
         {
-            Vector3 distance = target.position - transform.position;
+            if(!target)
+            {
+                Destroy(gameObject);
+                return;
+            }
+
+            float dist = Vector3.Distance(target.position, transform.position);
             
-            distance.Normalize();
-            Debug.Log("Target : " + target.position + " / Current : " + transform.position + " / distance : " + distance);
+            if(dist < 1.0f)
+            {
+                Explode(damage, damageRange);
+            }
 
             transform.Translate(Vector3.forward * speed * Time.deltaTime);
         }
 
-        public void OnCollisionEnter(Collision collision)
-        {
-            Explode(damage, damageRange, enemy);
-        }
-
-        private void OnDrawGizmosSelected()
+        private void OnDrawGizmos()
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(target.position, damageRange);
+            Gizmos.DrawWireSphere(transform.position, damageRange);
         }
 
-        public void Explode(int damage, int damageRange, EnemyController enemy)
+        private void Explode(int damage, int damageRange)
         {
+            var newMuzzle = Instantiate(bombMuzzle);
+            newMuzzle.transform.SetPositionAndRotation(target.position, target.rotation);
+            Destroy(newMuzzle, 1f);
+
             Collider[] colliders = Physics.OverlapSphere(transform.position, damageRange);
 
             foreach(Collider col in colliders)
             {
                 if(col.tag == "Enemy")
                 {
-                    enemy.Damage(damage);
+                    col.GetComponent<EnemyController>().Damage(damage);
                 }
             }
 
             Destroy(gameObject);
+        }
+
+        private void Thrower(int damage, int damageRage)
+        {
+            Collider[] colliders = Physics.OverlapSphere(transform.position, damageRange);
+
+
+        }
+
+        private void Lazor()
+        {
+            Ray ray = new Ray(transform.position, transform.forward);
+            RaycastHit[] hitObjects = Physics.SphereCastAll(ray, 0f, 0f);
+            if (hitObjects != null)
+            {
+            }
         }
     }
 }
