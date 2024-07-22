@@ -74,6 +74,7 @@ namespace UTD
             {
                 return;
             }
+
             Vector3 mousePosition = inputManager.GetSelectedMapPosition();
             Vector3Int gridPosition = grid.WorldToCell(mousePosition);
 
@@ -87,13 +88,6 @@ namespace UTD
                 isReplace = false;
             }
         }
-
-        //private bool CheckPlacementValidity(Vector3Int gridPosition, int selectObjectIndex)
-        //{
-        //    GridData selectedData = database.objectsData[selectObjectIndex].ID == 0 ? floorData : buildingData;
-
-        //    return selectedData.CanPlacedObjectAt(gridPosition, database.objectsData[selectObjectIndex].Size);
-        //}
 
         private void StopPlacement()
         {

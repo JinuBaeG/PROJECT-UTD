@@ -14,10 +14,15 @@ namespace UTD
             return placedObjects[gridPosition].ID;
         }
 
-        public void AddOjectAt(Vector3Int gridPosition, Vector2Int objectSize, int ID, int placedObjectIndex)
+        public int GetPlacedObjectPrice(Vector3Int gridPosition)
+        {
+            return placedObjects[gridPosition].SellPrice;
+        }
+
+        public void AddOjectAt(Vector3Int gridPosition, Vector2Int objectSize, int ID, int placedObjectIndex, int sellPrice)
         {
             List<Vector3Int> positionToOccupy = CalculatePositions(gridPosition, objectSize);
-            PlacementData data = new PlacementData(positionToOccupy, ID, placedObjectIndex);
+            PlacementData data = new PlacementData(positionToOccupy, ID, placedObjectIndex, sellPrice);
             foreach(var pos in positionToOccupy)
             {
                 if(placedObjects.ContainsKey(pos))
@@ -87,11 +92,14 @@ namespace UTD
 
         public int PlacedObjectIndex { get; private set; }
 
-        public PlacementData(List<Vector3Int> occupiedPositions, int iD, int placedObjectIndex)
+        public int SellPrice { get; private set; }
+
+        public PlacementData(List<Vector3Int> occupiedPositions, int iD, int placedObjectIndex, int sellPrice)
         {
             this.occupiedPositions = occupiedPositions;
             ID = iD;
             PlacedObjectIndex = placedObjectIndex;
+            SellPrice = sellPrice;
         }
     }
 }

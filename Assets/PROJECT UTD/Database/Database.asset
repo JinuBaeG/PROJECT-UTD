@@ -13,93 +13,39 @@ MonoBehaviour:
   m_Name: Database
   m_EditorClassIdentifier: 
   objectsData:
-  - <Name>k__BackingField: Common Tower
+  - <Name>k__BackingField: Common Turret
     <ID>k__BackingField: 0
     <Size>k__BackingField: {x: 2, y: 2}
-    <Prefab>k__BackingField: {fileID: 4100750550872549091, guid: 969df0c2428e14550af71c36838c5813, type: 3}
+    <Prefab>k__BackingField: {fileID: 4152539409342719878, guid: 969df0c2428e14550af71c36838c5813, type: 3}
     <Damage>k__BackingField: 10
+    <DamageRange>k__BackingField: 0
     <Attribute>k__BackingField: 
     <AttackSpeed>k__BackingField: 1
     <isSplash>k__BackingField: 0
     <sellPrice>k__BackingField: 3
     <weight>k__BackingField: 50000
-  - <Name>k__BackingField: Uncommon Tower
+    <range>k__BackingField: 5
+  - <Name>k__BackingField: Uncommon Turret
     <ID>k__BackingField: 1
     <Size>k__BackingField: {x: 2, y: 2}
-    <Prefab>k__BackingField: {fileID: 4100750550872549091, guid: 969df0c2428e14550af71c36838c5813, type: 3}
+    <Prefab>k__BackingField: {fileID: 7989003166614897420, guid: e6af6a75a3951409db5316614a89dbdb, type: 3}
     <Damage>k__BackingField: 8
+    <DamageRange>k__BackingField: 0
     <Attribute>k__BackingField: 
-    <AttackSpeed>k__BackingField: 0.3
+    <AttackSpeed>k__BackingField: 0.8
     <isSplash>k__BackingField: 0
-    <sellPrice>k__BackingField: 6
+    <sellPrice>k__BackingField: 5
     <weight>k__BackingField: 33100
-  - <Name>k__BackingField: Rare Tower
+    <range>k__BackingField: 5
+  - <Name>k__BackingField: Bazuka Turret
     <ID>k__BackingField: 2
     <Size>k__BackingField: {x: 2, y: 2}
-    <Prefab>k__BackingField: {fileID: 4100750550872549091, guid: 969df0c2428e14550af71c36838c5813, type: 3}
-    <Damage>k__BackingField: 30
+    <Prefab>k__BackingField: {fileID: 1974293918152682435, guid: a28a4f0a02dbc4eb6b518edeb45696a1, type: 3}
+    <Damage>k__BackingField: 20
+    <DamageRange>k__BackingField: 3
     <Attribute>k__BackingField: 
-    <AttackSpeed>k__BackingField: 1.2
-    <isSplash>k__BackingField: 0
+    <AttackSpeed>k__BackingField: 3
+    <isSplash>k__BackingField: 1
     <sellPrice>k__BackingField: 9
-    <weight>k__BackingField: 10200
-  - <Name>k__BackingField: Epic Tower
-    <ID>k__BackingField: 3
-    <Size>k__BackingField: {x: 2, y: 2}
-    <Prefab>k__BackingField: {fileID: 4100750550872549091, guid: 969df0c2428e14550af71c36838c5813, type: 3}
-    <Damage>k__BackingField: 80
-    <Attribute>k__BackingField: 
-    <AttackSpeed>k__BackingField: 1
-    <isSplash>k__BackingField: 1
-    <sellPrice>k__BackingField: 12
-    <weight>k__BackingField: 5100
-  - <Name>k__BackingField: Unique Tower
-    <ID>k__BackingField: 4
-    <Size>k__BackingField: {x: 2, y: 2}
-    <Prefab>k__BackingField: {fileID: 4100750550872549091, guid: 969df0c2428e14550af71c36838c5813, type: 3}
-    <Damage>k__BackingField: 150
-    <Attribute>k__BackingField: 
-    <AttackSpeed>k__BackingField: 800
-    <isSplash>k__BackingField: 0
-    <sellPrice>k__BackingField: 30
-    <weight>k__BackingField: 0
-  - <Name>k__BackingField: Legendary Tower
-    <ID>k__BackingField: 5
-    <Size>k__BackingField: {x: 2, y: 2}
-    <Prefab>k__BackingField: {fileID: 4100750550872549091, guid: 969df0c2428e14550af71c36838c5813, type: 3}
-    <Damage>k__BackingField: 800
-    <Attribute>k__BackingField: 
-    <AttackSpeed>k__BackingField: 0.5
-    <isSplash>k__BackingField: 1
-    <sellPrice>k__BackingField: 0
-    <weight>k__BackingField: 500
-  - <Name>k__BackingField: Awaken Tower
-    <ID>k__BackingField: 6
-    <Size>k__BackingField: {x: 2, y: 2}
-    <Prefab>k__BackingField: {fileID: 4100750550872549091, guid: 969df0c2428e14550af71c36838c5813, type: 3}
-    <Damage>k__BackingField: 1500
-    <Attribute>k__BackingField: 
-    <AttackSpeed>k__BackingField: 0.5
-    <isSplash>k__BackingField: 1
-    <sellPrice>k__BackingField: 0
-    <weight>k__BackingField: 200
-  - <Name>k__BackingField: Demigod Tower
-    <ID>k__BackingField: 7
-    <Size>k__BackingField: {x: 2, y: 2}
-    <Prefab>k__BackingField: {fileID: 4100750550872549091, guid: 969df0c2428e14550af71c36838c5813, type: 3}
-    <Damage>k__BackingField: 5000
-    <Attribute>k__BackingField: 
-    <AttackSpeed>k__BackingField: 0.5
-    <isSplash>k__BackingField: 1
-    <sellPrice>k__BackingField: 0
-    <weight>k__BackingField: 80
-  - <Name>k__BackingField: God Tower
-    <ID>k__BackingField: 8
-    <Size>k__BackingField: {x: 2, y: 2}
-    <Prefab>k__BackingField: {fileID: 4100750550872549091, guid: 969df0c2428e14550af71c36838c5813, type: 3}
-    <Damage>k__BackingField: 10000
-    <Attribute>k__BackingField: 
-    <AttackSpeed>k__BackingField: 0.3
-    <isSplash>k__BackingField: 1
-    <sellPrice>k__BackingField: 0
-    <weight>k__BackingField: 18
+    <weight>k__BackingField: 10200000
+    <range>k__BackingField: 5

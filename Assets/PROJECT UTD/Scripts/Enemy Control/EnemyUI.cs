@@ -11,22 +11,21 @@ namespace UTD
 
         public EnemyController linkedEnemy;
 
-        private Transform camera;
+        private Transform cam;
 
         private void Start()
         {
             linkedEnemy.onDamageCallback += RefreshHpBar;
-            camera = Camera.main.transform;
+            cam = Camera.main.transform;
         }
 
         private void Update()
         {
-            transform.LookAt(transform.position + camera.rotation * Vector3.forward, camera.rotation * Vector3.up);
+            transform.LookAt(transform.position + cam.rotation * Vector3.forward, cam.rotation * Vector3.up);
         }
 
         public void RefreshHpBar(float healthPoint, float maxHealthPoint)
         {
-            Debug.Log(healthPoint + " / " + maxHealthPoint);
             hpBar.fillAmount = healthPoint / maxHealthPoint;
         }
     }

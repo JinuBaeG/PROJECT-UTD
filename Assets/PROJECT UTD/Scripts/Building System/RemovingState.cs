@@ -53,6 +53,7 @@ namespace UTD
 
                 selectedData.RemoveObjectAt(gridPosition);
                 objectPlacer.RemoveObjectAt(gameObjectIndex);
+                GameManager.Singleton.sellTurret(selectedData.GetPlacedObjectPrice(gridPosition));
             }
 
             Vector3 cellPosition = grid.CellToWorld(gridPosition);

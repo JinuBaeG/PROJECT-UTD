@@ -10,6 +10,7 @@ namespace UTD
         [SerializeField]
         private List<GameObject> placedGameObject = new();
         private TurretController turret;
+        private Scanner scanner;
         private GameObject newObject;
 
         public int PlaceObject(GameObject prefab, Vector3 position)
@@ -24,10 +25,17 @@ namespace UTD
         public void InitTurret(ObjectDatabaseSO database, int selectedObjectIndex)
         {
             turret = newObject.GetComponentInChildren<TurretController>();
-            Debug.Log(database.objectsData[selectedObjectIndex].Damage);
+            scanner = newObject.GetComponentInChildren<Scanner>();
+
             turret.damage = database.objectsData[selectedObjectIndex].Damage;
+            turret.damageRange = database.objectsData[selectedObjectIndex].DamageRange;
+            turret.isSplash = database.objectsData[selectedObjectIndex].isSplash;
             turret.attackSpeed = database.objectsData[selectedObjectIndex].AttackSpeed;
             turret.sellPrice = database.objectsData[selectedObjectIndex].sellPrice;
+            turret.projector.orthographicSize = database.objectsData[selectedObjectIndex].range + 2.0f;
+            scanner.scanRange = database.objectsData[selectedObjectIndex].range;
+            turret.isPreview = false;
+            turret.projector.enabled = false;
         }
 
         internal void RemoveObjectAt(int gameObjectIndex)

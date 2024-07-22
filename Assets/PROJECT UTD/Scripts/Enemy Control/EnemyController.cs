@@ -10,12 +10,12 @@ namespace UTD
         public static EnemyController instance;
 
         public float healthPoint;
-
         public float maxHealthPoint;
-
         public float moveSpeed = 10f;
 
         public Transform way1_1, way1_2, way2_1, way2_2, way3_1, way3_2, way4_1, way4_2;
+
+        public GameObject metalMuzzlePrefab;
 
         NavMeshAgent nmAgent;
 
@@ -30,17 +30,16 @@ namespace UTD
             
             onDamageCallback(healthPoint, maxHealthPoint);
 
+            var newImpact = Instantiate(metalMuzzlePrefab);
+            newImpact.transform.SetPositionAndRotation(transform.position, transform.rotation);
+            Destroy(newImpact, 2f);
+
             if(healthPoint <= 0)
             {
+                GameManager.Singleton.killEnemy();
                 Destroy(gameObject);
             }
 
-        }
-
-        [ContextMenu("Damage Debug")]
-        public void DamageDebugButton()
-        {
-            Damage(20);
         }
 
         private void Awake()

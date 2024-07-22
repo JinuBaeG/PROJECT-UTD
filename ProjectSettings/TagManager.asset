@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Common
+  - Uncommon
+  - Rare
   layers:
   - Default
   - TransparentFX
@@ -31,7 +34,7 @@ TagManager:
   - Ground
   - Enemy
   - MinimapIcon
-  - 
+  - Tower
   - 
   - 
   - 

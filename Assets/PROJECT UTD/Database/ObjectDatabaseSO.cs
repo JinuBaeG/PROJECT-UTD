@@ -30,6 +30,9 @@ namespace UTD
         public int Damage { get; private set; }
 
         [field: SerializeField]
+        public int DamageRange { get; private set; }
+
+        [field: SerializeField]
         public string Attribute { get; private set; }
 
         [field: SerializeField]
@@ -44,5 +47,7 @@ namespace UTD
         [field: SerializeField]
         public int weight { get; private set; }
 
+        [field: SerializeField]
+        public float range { get; private set; }
     }
 }

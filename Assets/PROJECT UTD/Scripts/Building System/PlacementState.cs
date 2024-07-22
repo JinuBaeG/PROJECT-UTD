@@ -57,16 +57,19 @@ namespace UTD
 
             int index = objectPlacer.PlaceObject(database.objectsData[selectedObjectIndex].Prefab, grid.CellToWorld(gridPosition));
             objectPlacer.InitTurret(database, selectedObjectIndex);
+            GameManager.Singleton.buyRandomTurret();
 
             GridData selectedData = buildingData;
 
             selectedData.AddOjectAt(gridPosition
                 , database.objectsData[selectedObjectIndex].Size
                 , database.objectsData[selectedObjectIndex].ID
-                , index);
+                , index
+                , database.objectsData[selectedObjectIndex].sellPrice);
 
             // Construct Position Preview
             previewSystem.UpdatePosition(grid.CellToWorld(gridPosition), false);
+            
         }
 
         private bool CheckPlacementValidity(Vector3Int gridPosition, int selectObjectIndex)

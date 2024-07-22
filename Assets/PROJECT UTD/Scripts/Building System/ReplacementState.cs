@@ -83,12 +83,14 @@ namespace UTD
 
                 gameObjectIndex = database.objectsData.FindIndex(data => data.ID == replaceSelectObjectID);
                 int index = objectPlacer.PlaceObject(database.objectsData[replaceSelectObjectID].Prefab, grid.CellToWorld(gridPosition));
+                objectPlacer.InitTurret(database, gameObjectIndex);
 
                 selectedData = buildingData;
                 selectedData.AddOjectAt(gridPosition
                         , database.objectsData[gameObjectIndex].Size
                         , database.objectsData[gameObjectIndex].ID
-                        , index);
+                        , index
+                        , database.objectsData[gameObjectIndex].sellPrice);
                 previewSystem.UpdatePosition(grid.CellToWorld(gridPosition), false);
 
             }
@@ -103,7 +105,8 @@ namespace UTD
             buildingData.AddOjectAt(oldGridPosition
                         , database.objectsData[gameObjectIndex].Size
                         , database.objectsData[gameObjectIndex].ID
-                        , index); 
+                        , index
+                        , database.objectsData[gameObjectIndex].sellPrice); 
         }
 
         private bool CheckPlacementValidity(Vector3Int gridPosition, int selectObjectIndex)

@@ -65,7 +65,8 @@ namespace UTD
         private void PreparePreview(GameObject previewObject)
         {
             Renderer[] renderers = previewObject.GetComponentsInChildren<Renderer>();
-            foreach(Renderer renderer in renderers)
+
+            foreach (Renderer renderer in renderers)
             {
                 Material[] materials = renderer.materials;
                 for(int i = 0; i < materials.Length; i++)
