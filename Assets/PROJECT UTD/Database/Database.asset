@@ -37,15 +37,39 @@ MonoBehaviour:
     <sellPrice>k__BackingField: 5
     <weight>k__BackingField: 33100
     <range>k__BackingField: 5
-  - <Name>k__BackingField: Bazuka Turret
+  - <Name>k__BackingField: Rare Turret
     <ID>k__BackingField: 2
     <Size>k__BackingField: {x: 2, y: 2}
     <Prefab>k__BackingField: {fileID: 1974293918152682435, guid: a28a4f0a02dbc4eb6b518edeb45696a1, type: 3}
-    <Damage>k__BackingField: 20
+    <Damage>k__BackingField: 30
     <DamageRange>k__BackingField: 3
     <Attribute>k__BackingField: 
     <AttackSpeed>k__BackingField: 3
     <isSplash>k__BackingField: 1
     <sellPrice>k__BackingField: 9
-    <weight>k__BackingField: 10200000
-    <range>k__BackingField: 5
+    <weight>k__BackingField: 10200
+    <range>k__BackingField: 8
+  - <Name>k__BackingField: Epic Turret
+    <ID>k__BackingField: 3
+    <Size>k__BackingField: {x: 2, y: 2}
+    <Prefab>k__BackingField: {fileID: 0}
+    <Damage>k__BackingField: 150
+    <DamageRange>k__BackingField: 0
+    <Attribute>k__BackingField: 
+    <AttackSpeed>k__BackingField: 1
+    <isSplash>k__BackingField: 0
+    <sellPrice>k__BackingField: 16
+    <weight>k__BackingField: 0
+    <range>k__BackingField: 10
+  - <Name>k__BackingField: Unique Turret
+    <ID>k__BackingField: 4
+    <Size>k__BackingField: {x: 2, y: 2}
+    <Prefab>k__BackingField: {fileID: 0}
+    <Damage>k__BackingField: 0
+    <DamageRange>k__BackingField: 0
+    <Attribute>k__BackingField: 
+    <AttackSpeed>k__BackingField: 0
+    <isSplash>k__BackingField: 0
+    <sellPrice>k__BackingField: 0
+    <weight>k__BackingField: 0
+    <range>k__BackingField: 0
